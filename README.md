@@ -20,6 +20,7 @@ MariaDB [(none)]> SHOW MASTER STATUS;
 
 #### run on slave to start replication
 ```bash
+STOP SLAVE;
 CHANGE MASTER TO MASTER_HOST ='mysql_master',MASTER_USER ='mydb_slave_user',MASTER_PASSWORD ='mydb_slave_pwd',MASTER_LOG_FILE ='<File>',MASTER_LOG_POS =<Position>;
 START SLAVE;
 ```
